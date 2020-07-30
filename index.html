@@ -9,7 +9,7 @@ var checkoutButton = document.getElementById('checkout-button');
 
 checkoutButton.addEventListener('click', function() {
     stripe.redirectToCheckout({
-        sessionId: URLSearchParams(window.location.search).get('sessionId')
+        sessionId: new URLSearchParams(window.location.search).get('sessionId')
     }).then(function (result) {
     // If `redirectToCheckout` fails due to a browser or network
     // error, display the localized error message to your customer
