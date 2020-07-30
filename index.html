@@ -7,6 +7,11 @@
 var stripe = Stripe('pk_test_2Hpz2rLsc2u5PbBnHqdEdYkK00OY1VLIMO');
 var checkoutButton = document.getElementById('checkout-button');
 
+// - Remove button dimensions as we only want it's Stripe action
+checkoutButton.style.height = '0px';
+checkoutButton.style.width= '0px';
+
+// Add listener to redirect
 checkoutButton.addEventListener('click', function() {
     stripe.redirectToCheckout({
         sessionId: new URLSearchParams(window.location.search).get('sessionId')
