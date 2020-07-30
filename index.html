@@ -6,17 +6,18 @@
 
 var stripe = Stripe('pk_test_2Hpz2rLsc2u5PbBnHqdEdYkK00OY1VLIMO');
 var checkoutButton = document.getElementById('checkout-button');
-const params = window.location.search;
+const params = new URLSearchParams(window.location.search)
 
 checkoutButton.addEventListener('click', function() {
- stripe.redirectToCheckout({
     console.log(params)
-    sessionId: params.get('sessionId')
-  }).then(function (result) {
+
+    stripe.redirectToCheckout({
+        sessionId: params.get('sessionId')
+    }).then(function (result) {
     // If `redirectToCheckout` fails due to a browser or network
     // error, display the localized error message to your customer
     // using `result.error.message`.
-  });
+    });
 });
 
 </script>
