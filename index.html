@@ -1,1 +1,23 @@
-Hello World
+<script src="https://js.stripe.com/v3/"></script>
+<button id="checkout-button">Checkout</button>
+
+<!--Start of Stripe Checkout Script-->
+<script type="text/javascript">
+
+var stripe = Stripe('pk_test_2Hpz2rLsc2u5PbBnHqdEdYkK00OY1VLIMO');
+var checkoutButton = document.getElementById('checkout-button');
+const params = new URLSearchParams(window.location.search)
+
+checkoutButton.addEventListener('click', function() {
+ stripe.redirectToCheckout({
+    console.log(params);
+    sessionId: params.get('sessionId')
+  }).then(function (result) {
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `result.error.message`.
+  });
+});
+
+</script>
+<!--End of Stripe Checkout Script-->
