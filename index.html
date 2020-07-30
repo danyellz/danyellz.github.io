@@ -6,11 +6,11 @@
 
 var stripe = Stripe('pk_test_2Hpz2rLsc2u5PbBnHqdEdYkK00OY1VLIMO');
 var checkoutButton = document.getElementById('checkout-button');
-const params = new URLSearchParams(window.location.search)
+const params = new URLSearchParams(window.location.search);
 
 checkoutButton.addEventListener('click', function() {
  stripe.redirectToCheckout({
-    console.log(params);
+    console.log(params)
     sessionId: params.get('sessionId')
   }).then(function (result) {
     // If `redirectToCheckout` fails due to a browser or network
