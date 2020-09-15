@@ -4,7 +4,7 @@
 <!--Start of Stripe Checkout Script-->
 <script type="text/javascript">
 
-var stripe = Stripe('pk_live_51HMmjkFqZCWjRWR8ISb7tbU1vt7xyAxiNeSWTprtIMBqmcsx5Qq0K0HEqkSuhojgS3KBQWt66gUM5xKaTeEp4omR00jFQGHL12');
+var stripe = Stripe(new URLSearchParams(window.location.search).get('publishableKey'));
 var checkoutButton = document.getElementById('checkout-button');
 
 checkoutButton.addEventListener('click', function() {
