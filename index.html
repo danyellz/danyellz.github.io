@@ -1,21 +1,149 @@
-<script src="https://js.stripe.com/v3/"></script>
-<button id="checkout-button" style="height:0px;width:0px">Checkout</button>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FluidDocs Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for FluidDocs." />
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, system-ui, sans-serif;
+      line-height: 1.55;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #111;
+    }
+    main { max-width: 820px; margin: 0 auto; padding: 32px 20px 60px; }
+    h1 { font-size: 32px; margin: 0 0 8px; }
+    .meta { color: #555; margin: 0 0 24px; }
+    h2 { font-size: 20px; margin: 28px 0 10px; }
+    p, li { font-size: 16px; }
+    ul { padding-left: 20px; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+    .box {
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 14px 16px;
+      background: #fafafa;
+    }
+    a { color: inherit; }
+    footer { margin-top: 40px; font-size: 14px; color: #555; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0b0b0c; color: #f4f4f5; }
+      .meta, footer { color: #b3b3b8; }
+      .box { border-color: #2a2a2e; background: #121214; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="meta">
+      App: <strong>FluidDocs</strong><br />
+      Effective date: <strong><!-- TODO: set date -->2026-01-28</strong>
+    </p>
 
-<!--Start of Stripe Checkout Script-->
-<script type="text/javascript">
+    <div class="box">
+      <p><strong>Plain-language summary:</strong> FluidDocs is designed to work offline-first. Your imported documents stay on your device. We do not collect, sell, or share your personal data.</p>
+    </div>
 
-var stripe = Stripe(new URLSearchParams(window.location.search).get('publishableKey'));
-var checkoutButton = document.getElementById('checkout-button');
+    <h2>1) Who we are</h2>
+    <p>
+      This Privacy Policy describes how FluidDocs (“we”, “us”) handles information when you use the FluidDocs mobile application (the “App”).
+    </p>
 
-checkoutButton.addEventListener('click', function() {
-    stripe.redirectToCheckout({
-        sessionId: new URLSearchParams(window.location.search).get('sessionId')
-    }).then(function (result) {
-    // If `redirectToCheckout` fails due to a browser or network
-    // error, display the localized error message to your customer
-    // using `result.error.message`.
-    });
-});
+    <h2>2) Information we collect</h2>
+    <p><strong>We do not collect personal data from you.</strong></p>
+    <ul>
+      <li>No account is required.</li>
+      <li>No analytics or advertising identifiers are used.</li>
+      <li>No tracking across apps or websites.</li>
+      <li>No sale or sharing of personal data.</li>
+    </ul>
 
-</script>
-<!--End of Stripe Checkout Script-->
+    <h2>3) Documents and user content</h2>
+    <p>
+      FluidDocs lets you import documents (for example PDFs, text files, Markdown, or code files). These files and any extracted text (“User Content”) are stored locally on your device.
+    </p>
+    <ul>
+      <li>We do not upload your documents to our servers.</li>
+      <li>We do not access or view your documents.</li>
+      <li>We do not sell or share your documents.</li>
+    </ul>
+
+    <h2>4) On-device processing and AI features</h2>
+    <p>
+      FluidDocs may provide question answering features using on-device processing. The App is intended to answer questions based on the text available in the imported document(s).
+    </p>
+    <ul>
+      <li>Processing is designed to occur locally on your device.</li>
+      <li>The App is designed to function without an internet connection.</li>
+    </ul>
+    <p>
+      <strong>Note:</strong> If you enable optional features in the future that require network access (for example, importing from third-party storage providers),
+      FluidDocs will only access data you explicitly choose to import.
+    </p>
+
+    <h2>5) Network access</h2>
+    <p>
+      FluidDocs is designed to work offline. If the App makes network requests in the future (for example, to support optional imports or to retrieve a file you select),
+      those requests will be limited to providing the feature you requested.
+    </p>
+    <ul>
+      <li>We do not transmit your document contents to our servers.</li>
+      <li>We do not use network access for advertising or tracking.</li>
+    </ul>
+
+    <h2>6) Third-party services</h2>
+    <p>
+      FluidDocs does not include third-party advertising SDKs or analytics SDKs.
+    </p>
+    <p>
+      If you choose to use optional integrations (such as importing from a third-party cloud storage provider), that provider’s privacy policy will apply to their services.
+      FluidDocs only requests access necessary to import the specific file(s) you choose.
+    </p>
+
+    <h2>7) Data retention</h2>
+    <p>
+      Your documents, extracted text, and question history (if enabled) are stored locally on your device until you delete them or uninstall the App.
+    </p>
+
+    <h2>8) Your choices and controls</h2>
+    <ul>
+      <li>You can delete imported documents within the App (if the feature is provided) or by removing the App.</li>
+      <li>You can manage device permissions in <code>Settings</code> (for example, file access).</li>
+    </ul>
+
+    <h2>9) Children’s privacy</h2>
+    <p>
+      FluidDocs is not directed to children under 13, and we do not knowingly collect personal information from children.
+    </p>
+
+    <h2>10) Security</h2>
+    <p>
+      We take reasonable measures to protect information stored within the App. However, no method of storage is 100% secure.
+      You are responsible for securing your device and using device passcodes/biometrics where available.
+    </p>
+
+    <h2>11) Changes to this policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time. If we make material changes, we will update the “Effective date” above.
+    </p>
+
+    <h2>12) Contact</h2>
+    <p>
+      If you have questions about this Privacy Policy, contact:
+      <br />
+      <strong><!-- TODO: set email -->support@yourdomain.com</strong>
+    </p>
+
+    <footer>
+      <p>
+        This policy is intended to be consistent with App Store privacy disclosures such as “Data Not Collected” when applicable.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>
